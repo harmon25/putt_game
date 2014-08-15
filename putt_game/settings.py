@@ -57,11 +57,18 @@ WSGI_APPLICATION = 'putt_game.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'django',
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': 'django',
+        'PASSWORD': 'password'
+    },
+    'putt_game': {
+        'NAME': 'putt_game',
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': 'django',
+        'PASSWORD': 'password'
     }
-}
-
+}   
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
